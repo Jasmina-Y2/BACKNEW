@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // 🟡 CORS abierto temporalmente (para pruebas desde cualquier dispositivo)
 app.use(cors({
-  origin: ['capacitor://localhost', 'http://localhost', '*'], // '*' solo para pruebas, evita en prod
+  origin: ['*'], // '*' solo para pruebas, evita en prod
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
 }));
