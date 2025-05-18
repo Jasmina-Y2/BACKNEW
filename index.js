@@ -8,11 +8,7 @@ const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // 🟡 CORS abierto temporalmente (para pruebas desde cualquier dispositivo)
-app.use(cors({
-  origin: ['*'], // '*' solo para pruebas, evita en prod
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type'],
-}));
+app.use(cors());  // Esto equivale a origin: '*'
 
 // Middleware para leer JSON
 app.use(express.json());
