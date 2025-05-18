@@ -45,8 +45,8 @@ app.post('/api/generar-historia', async (req, res) => {
   }
 });
 
-// 🟢 Escuchar en red local y puerto dinámico o 3000
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Servidor corriendo en red: http://0.0.0.0:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor corriendo en el puerto ${PORT}`);
 });
+
